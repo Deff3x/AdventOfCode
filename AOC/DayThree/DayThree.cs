@@ -5,17 +5,10 @@ namespace AOC {
     [AOCAttribute(3)]
 	public class DayThree : BaseAOC {
     	public override void Run() {
-			string[] input;
-            using (var sr = new StreamReader(".\\AOC\\DayThree\\input-test.txt"))
-                input = sr.ReadToEnd().Replace("\r", "").Split("\n");
-
 			string[] bigMap = new string[input.Length];
 			for (int i =0; i < input.Length; i++) {
-				for (int i2 = 0; i2 < 50; i2++)
-					bigMap[i] += input[i];
-				}
-				
-
+				bigMap[i] = string.Concat(System.Linq.Enumerable.Repeat(input[i], 50));
+			}
 
 			int iCurIdx = 3;
 			int iTreeCount = 0;

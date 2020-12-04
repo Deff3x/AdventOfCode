@@ -6,10 +6,6 @@ namespace AOC {
     [AOCAttribute(1)]
     public class DayOne : BaseAOC {
 		public override void Run() {
-			string[] input;
-            using (var sr = new StreamReader(".\\AOC\\DayOne\\input.txt"))
-                input = sr.ReadToEnd().Split("\n");
-
             for (int i = 0; i < input.Length; i++)
             for (int i2 = i; i2 < input.Length; i2++)
             for (int i3 = i2; i3 < input.Length; i3++) {

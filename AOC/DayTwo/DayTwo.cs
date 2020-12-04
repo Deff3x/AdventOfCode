@@ -7,10 +7,6 @@ namespace AOC {
     [AOCAttribute(2)]
     public class DayTwo : BaseAOC {
 		public override void Run() {
-            string[] input;
-            using (var sr = new StreamReader(".\\AOC\\DayTwo\\input.txt"))
-                input = sr.ReadToEnd().Split("\n");
-            
             var expr = new Regex("([0-9]+)-([0-9]+) ([A-z]+): (.*)");
 
             int iCount = 0;

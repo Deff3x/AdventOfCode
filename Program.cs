@@ -17,8 +17,3 @@ foreach (var asm in asms)
 
     System.Console.WriteLine();
 }
-
-
-
-
-
