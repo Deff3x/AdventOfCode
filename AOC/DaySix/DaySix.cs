@@ -12,7 +12,7 @@ namespace AOC {
 
 		public void Part1() {
 			var groups = RawInput.Split("\r\n\r\n");
-			var peopleCount = groups.Select(x => x.Split("\r\n").Count()).ToArray<int>();
+			// var peopleCount = groups.Select(x => x.Split("\r\n").Count()).ToArray<int>();
 			var uniqueSum = groups.Sum(x => string.Join("", x.Split("\r\n")).Distinct().Count());
 			
 			System.Console.WriteLine("Part 1: " + uniqueSum);
@@ -29,7 +29,7 @@ namespace AOC {
 					sum1 += ppl[0].Length;
 					continue;
 				}
-				
+
 				foreach (var p in ppl) {
 					p.Distinct().ToList().ForEach(x => {
 						if(dic.ContainsKey(x))

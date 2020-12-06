@@ -9,7 +9,7 @@ var asms = System.Reflection.Assembly
     .OrderBy(t => ((AOCAttribute)System.Attribute.GetCustomAttribute(t, typeof(AOCAttribute))).Index)
     .ToArray();
 
-foreach (var asm in asms) {
+foreach (var asm in asms){
     var test = System.Activator.CreateInstance(null, asm.FullName);
     var obj = (BaseAOC)test.Unwrap();
     obj.Start();
