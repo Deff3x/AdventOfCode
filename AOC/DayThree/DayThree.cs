@@ -21,13 +21,12 @@ namespace AOC {
 				iFreeCount = 0;
 
 				for(int ln = t[1]; ln < bigMap.Length; ln += t[1]) {
-					if (bigMap[ln][iCurIdx] == '.') 		iFreeCount++;
-					else if (bigMap[ln][iCurIdx] == '#') iTreeCount++;					
-
-					iCurIdx += t[0];
-
-					if (iCurIdx >= input[ln].Length)
-						iCurIdx -= input[ln].Length;
+					if (bigMap[ln][iCurIdx] == '.') 	 
+						iFreeCount++;
+					else if (bigMap[ln][iCurIdx] == '#') 
+						iTreeCount++;					
+					
+					iCurIdx = (iCurIdx + t[0]) % input[ln].Length;
 				}
 				
 				Console.WriteLine("TreeCount[{1}, {2}]: {0}", iTreeCount, t[0], t[1]);
